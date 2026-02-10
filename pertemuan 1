@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 1: Konsep Dasar Kurikulum - Teknologi Pendidikan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+
+        .reading-mode {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f8fafc;
+        }
+
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 1000;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: #3b82f6;
+            width: 0%;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Progress Bar -->
+    <div class="progress-container bg-slate-200">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-morphism border-b px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-600 p-2 rounded-lg text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-bold text-lg tracking-tight">TP Digital Learning</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#pendahuluan" class="hover:text-blue-600">Pendahuluan</a>
+                <a href="#pengertian" class="hover:text-blue-600">Pengertian</a>
+                <a href="#tokoh" class="hover:text-blue-600">Tokoh</a>
+                <a href="#konsep" class="hover:text-blue-600">Konsep Dasar</a>
+                <a href="#aktivitas" class="hover:text-blue-600">Aktivitas</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button onclick="toggleReadingMode()" class="flex items-center gap-2 px-4 py-2 hover:bg-slate-100 rounded-lg transition text-sm font-medium text-slate-600" title="Mode Baca">
+                    <i data-lucide="eye" class="w-4 h-4 text-slate-600"></i> Mode Baca
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-20 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <span class="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4">
+                Mata Kuliah: Kajian Kurikulum
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Pertemuan 1:<br>Pengertian & Konsep Dasar Kurikulum</h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed">
+                Membangun fondasi pemahaman kurikulum sebagai sistem navigasi dalam desain instruksional bagi desainer pembelajaran masa depan.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center gap-2 text-sm text-slate-300">
+                    <i data-lucide="clock" class="w-4 h-4"></i> 100 Menit Belajar Mandiri
+                </div>
+                <div class="flex items-center gap-2 text-sm text-slate-300">
+                    <i data-lucide="user-check" class="w-4 h-4"></i> Target: Mahasiswa S1 TP
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute right-0 bottom-0 opacity-10">
+            <i data-lucide="layout" class="w-96 h-96 -mr-20 -mb-20"></i>
+        </div>
+    </header>
+
+    <main id="content-area" class="max-w-5xl mx-auto px-6 py-16 space-y-24">
+
+        <!-- 2. Pendahuluan Konseptual -->
+        <section id="pendahuluan" class="scroll-mt-24">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Fondasi Ilmu Pendidikan</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Kurikulum bukan sekadar daftar mata pelajaran, melainkan jantung dari proses pendidikan. Bagi mahasiswa Teknologi Pendidikan (TP), memahami kurikulum adalah syarat mutlak sebelum merancang sistem instruksional atau memilih media pembelajaran.
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl italic text-slate-700">
+                        "Kurikulum adalah substansi yang akan disampaikan, sedangkan Teknologi Pendidikan adalah sistem atau cara bagaimana substansi tersebut diantarkan dan dikelola secara efektif."
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="graduation-cap" class="text-blue-600"></i> Peran Mahasiswa TP:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">1</span>
+                            <div><strong class="text-slate-900">Pengembang Pembelajaran:</strong> Menyusun alur materi yang logis dan bermakna.</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">2</span>
+                            <div><strong class="text-slate-900">Desainer Instruksional:</strong> Menerjemahkan standar kurikulum ke dalam pengalaman belajar digital.</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">3</span>
+                            <div><strong class="text-slate-900">Evaluator:</strong> Mengukur sejauh mana kurikulum berhasil mencapai tujuan pembelajaran.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Pengertian Kurikulum & Analogi -->
+        <section id="pengertian" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Akar Kata & Makna</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="space-y-4">
+                    <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden" open>
+                        <summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50">
+                            <span class="font-semibold">Asal-usul: Currere</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="p-4 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Secara etimologis, kurikulum berasal dari bahasa Latin <em class="text-blue-600">"curere"</em> yang berarti berlari cepat, maju, menempuh, atau menjalani. Dalam konteks olahraga kuno, ini berarti lintasan pacu lari.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50">
+                            <span class="font-semibold">Perkembangan Makna</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="p-4 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Awalnya dipahami sebagai <em class="italic">"a race course"</em> (lintasan lari), kemudian berkembang dalam dunia pendidikan sebagai rencana pengalaman belajar yang harus ditempuh siswa dari awal hingga akhir untuk memperoleh gelar atau kompetensi.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-8 text-white relative flex flex-col justify-center overflow-hidden">
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-bold mb-4">Analogi: Learning Journey</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-blue-400 flex items-center justify-center text-blue-400">01</div>
+                                <div><p class="font-medium">Titik Start: Input/Potensi Mahasiswa</p></div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">02</div>
+                                <div><p class="font-medium text-blue-300">Lintasan: Kurikulum (Proses & Materi)</p></div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-green-400 flex items-center justify-center text-green-400">03</div>
+                                <div><p class="font-medium">Garis Finish: Capaian Lulusan</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Tokoh Kurikulum -->
+        <section id="tokoh" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Perspektif Ahli</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="user" class="text-slate-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ralph W. Tyler</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Traditionalist</p>
+                    <p class="text-sm text-slate-600 italic">"Segala pengalaman belajar yang direncanakan dan diarahkan oleh sekolah untuk mencapai tujuan pendidikan."</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="user" class="text-slate-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Hilda Taba</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Grassroots Model</p>
+                    <p class="text-sm text-slate-600 italic">"Sebuah rencana untuk belajar; yang berisi tujuan, pemilihan materi, dan organisasi pengalaman belajar."</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="user" class="text-slate-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Peter F. Oliva</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">System Approach</p>
+                    <p class="text-sm text-slate-600 italic">"Kurikulum adalah rencana atau program untuk semua pengalaman yang dipelajari siswa di bawah bimbingan sekolah."</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="user" class="text-slate-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Nana S.S</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Indonesian Perspective</p>
+                    <p class="text-sm text-slate-600 italic">"Suatu rencana yang memberi pedoman atau pegangan dalam proses belajar mengajar."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Sintesis Diagram -->
+        <section class="bg-blue-900 rounded-3xl p-12 text-white">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-12">Sintesis: Anatomi Kurikulum</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">TUJUAN<br>(Aims)</div>
+                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
+                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">ISI<br>(Content)</div>
+                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
+                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">PROSES<br>(Method)</div>
+                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
+                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">EVALUASI<br>(Assessment)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Dokumen vs Proses -->
+        <section class="scroll-mt-24">
+            <div class="grid md:grid-cols-2 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <div class="bg-white p-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="file-text" class="text-blue-600"></i>
+                        <h3 class="text-xl font-bold">Kurikulum sebagai Dokumen</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex gap-2"><span>•</span> Dokumen tertulis (RPS, Silabus).</li>
+                        <li class="flex gap-2"><span>•</span> Standar kompetensi lulusan.</li>
+                        <li class="flex gap-2"><span>•</span> Pedoman tertulis bagi dosen/guru.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="users" class="text-blue-600"></i>
+                        <h3 class="text-xl font-bold">Kurikulum sebagai Proses</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex gap-2"><span>•</span> Interaksi nyata di ruang kelas.</li>
+                        <li class="flex gap-2"><span>•</span> Implementasi strategi pembelajaran.</li>
+                        <li class="flex gap-2"><span>•</span> Pengalaman belajar (Learning Experience).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Konsep Dasar -->
+        <section id="konsep" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">4 Konsep Dasar Utama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Sistem</h4>
+                        <p class="text-sm text-slate-600">Kumpulan komponen yang saling berhubungan (tujuan, materi, metode, evaluasi) untuk mencapai hasil tertentu.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0">
+                        <i data-lucide="map"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Rencana</h4>
+                        <p class="text-sm text-slate-600">Blue print atau rancangan instruksional yang dipersiapkan sebelum interaksi belajar terjadi.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center shrink-0">
+                        <i data-lucide="activity"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Pengalaman</h4>
+                        <p class="text-sm text-slate-600">Totalitas apa yang dirasakan, dipikirkan, dan dilakukan mahasiswa selama masa studi.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Alat Tujuan</h4>
+                        <p class="text-sm text-slate-600">Instrumen strategis untuk mencetak profil lulusan yang sesuai dengan kebutuhan zaman.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Aktivitas -->
+        <section id="aktivitas" class="bg-slate-100 rounded-3xl p-10 border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                <i data-lucide="pencil-line" class="text-blue-600"></i> Ruang Refleksi & Aktivitas
+            </h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold mb-3 text-blue-700">Pertanyaan Reflektif:</h4>
+                    <p class="text-slate-700 mb-4 text-sm">"Jika Anda diminta merancang sebuah kursus online, mana yang akan Anda prioritaskan lebih dulu: dokumen kurikulumnya atau pengalaman belajarnya? Mengapa?"</p>
+                    <textarea class="w-full border rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none" rows="3" placeholder="Tulis refleksi singkat Anda di sini..."></textarea>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-400">
+                        <h4 class="font-bold mb-2">Studi Kasus</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">Analisis dampak ketidaksesuaian antara RPS (dokumen) dan metode ceramah satu arah (proses) terhadap pencapaian kompetensi lulusan TP.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-400">
+                        <h4 class="font-bold mb-2">Diskusi Forum</h4>
+                        <p class="text-sm text-slate-600 mb-4">Bagikan pandangan Anda di forum LMS mengenai sinergi antara Desain Instruksional dan Pengembangan Kurikulum.</p>
+                        <button class="text-blue-600 text-sm font-bold hover:underline">Buka Forum &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Rangkuman -->
+        <section class="scroll-mt-24">
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-8 relative">
+                <div class="absolute -top-4 left-8 bg-slate-900 text-white px-4 py-1 text-sm font-bold rounded">Rangkuman</div>
+                <div class="grid md:grid-cols-2 gap-8 mt-4">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-sm">
+                            <i data-lucide="check-circle-2" class="text-green-500 w-5 h-5 shrink-0"></i>
+                            <span>Kurikulum adalah rencana sekaligus pengalaman belajar.</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-sm">
+                            <i data-lucide="check-circle-2" class="text-green-500 w-5 h-5 shrink-0"></i>
+                            <span>Pentingnya keselarasan antara dokumen tertulis dan proses nyata.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Referensi -->
+        <section class="pb-20 border-t border-slate-200 pt-12">
+            <h3 class="text-lg font-bold mb-6">Referensi Akademik</h3>
+            <div class="space-y-4 text-xs md:text-sm text-slate-500 font-light">
+                <p>Oliva, P. F., & Gordon, W. R. (2012). <em>Developing the curriculum</em>. Pearson Higher Ed.</p>
+                <p>Sukmadinata, N. S. (2017). <em>Pengembangan Kurikulum: Teori dan Praktek</em>. PT Remaja Rosdakarya.</p>
+                <p>Tyler, R. W. (2013). <em>Basic principles of curriculum and instruction</em>. University of Chicago Press.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto text-center md:text-left text-sm">
+            &copy; 2025 Prodi Teknologi Pendidikan. Modul Digital Interaktif.
+        </div>
+    </footer>
+
+    <script>
+        // Pastikan pustaka Lucide sudah dimuat sebelum dijalankan
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            const bar = document.getElementById("progress-bar");
+            if (bar) bar.style.width = scrolled + "%";
+        };
+
+        function toggleReadingMode() {
+            const body = document.body;
+            const content = document.getElementById('content-area');
+            if (content) {
+                body.classList.toggle('bg-slate-100');
+                content.classList.toggle('reading-mode');
+                content.classList.toggle('bg-white');
+                content.classList.toggle('p-12');
+                content.classList.toggle('shadow-lg');
+                content.classList.toggle('rounded-3xl');
+            }
+        }
+    </script>
+</body>
+</html>
