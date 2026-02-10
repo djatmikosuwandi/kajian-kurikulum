@@ -53,6 +53,10 @@
         details summary::-webkit-details-marker {
             display: none;
         }
+
+        .table-container {
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -73,8 +77,8 @@
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#pendahuluan" class="hover:text-blue-600">Pendahuluan</a>
-                <a href="#pengertian" class="hover:text-blue-600">Pengertian</a>
-                <a href="#tokoh" class="hover:text-blue-600">Tokoh</a>
+                <a href="#mengapa-tp" class="hover:text-blue-600">Pentingnya bagi TP</a>
+                <a href="#perbandingan" class="hover:text-blue-600">Perbandingan</a>
                 <a href="#konsep" class="hover:text-blue-600">Konsep Dasar</a>
                 <a href="#aktivitas" class="hover:text-blue-600">Aktivitas</a>
             </div>
@@ -105,7 +109,6 @@
                 </div>
             </div>
         </div>
-        <!-- Decorative Elements -->
         <div class="absolute right-0 bottom-0 opacity-10">
             <i data-lucide="layout" class="w-96 h-96 -mr-20 -mb-20"></i>
         </div>
@@ -113,41 +116,92 @@
 
     <main id="content-area" class="max-w-5xl mx-auto px-6 py-16 space-y-24">
 
-        <!-- 2. Pendahuluan Konseptual -->
-        <section id="pendahuluan" class="scroll-mt-24">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Fondasi Ilmu Pendidikan</h2>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Kurikulum bukan sekadar daftar mata pelajaran, melainkan jantung dari proses pendidikan. Bagi mahasiswa Teknologi Pendidikan (TP), memahami kurikulum adalah syarat mutlak sebelum merancang sistem instruksional atau memilih media pembelajaran.
-                    </p>
-                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl italic text-slate-700">
-                        "Kurikulum adalah substansi yang akan disampaikan, sedangkan Teknologi Pendidikan adalah sistem atau cara bagaimana substansi tersebut diantarkan dan dikelola secara efektif."
+        <!-- 1. Pendahuluan & Mengapa TP perlu Mengkaji Kurikulum -->
+        <section id="mengapa-tp" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Mengapa Mahasiswa Teknologi Pendidikan Perlu Mengkaji Kurikulum?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Point A -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="anchor"></i>
                     </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Fondasi Desain Pembelajaran</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Tanpa memahami kurikulum, desain pembelajaran bisa tidak selaras dengan tujuan pendidikan dan media hanya menjadi alat tanpa solusi nyata.
+                    </p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                        <i data-lucide="graduation-cap" class="text-blue-600"></i> Peran Mahasiswa TP:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3">
-                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">1</span>
-                            <div><strong class="text-slate-900">Pengembang Pembelajaran:</strong> Menyusun alur materi yang logis dan bermakna.</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">2</span>
-                            <div><strong class="text-slate-900">Desainer Instruksional:</strong> Menerjemahkan standar kurikulum ke dalam pengalaman belajar digital.</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="bg-blue-100 text-blue-700 w-6 h-6 flex items-center justify-center rounded-full text-xs shrink-0 mt-1">3</span>
-                            <div><strong class="text-slate-900">Evaluator:</strong> Mengukur sejauh mana kurikulum berhasil mencapai tujuan pembelajaran.</div>
-                        </li>
-                    </ul>
+
+                <!-- Point B -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Penentu Capaian Lulusan</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Membantu menyusun capaian pembelajaran yang logis dan terukur, menjamin desain pembelajaran relevan dengan profil lulusan.
+                    </p>
                 </div>
+
+                <!-- Point C -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Keselarasan Teknologi</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Mencegah inovasi yang sekadar tren. Teknologi harus menjadi pendorong (enabler) kurikulum, bukan tujuan akhir.
+                    </p>
+                </div>
+
+                <!-- Point D -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Berpikir Sistemik</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Kurikulum adalah sistem. Kajian ini membantu melihat keterkaitan antar komponen dan merancang solusi secara menyeluruh.
+                    </p>
+                </div>
+
+                <!-- Point E -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Evaluator Kurikulum</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Mahasiswa TP berperan menilai relevansi dan kesenjangan antara pedoman tertulis dengan praktik nyata di lapangan.
+                    </p>
+                </div>
+
+                <!-- Point F -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Pengalaman Belajar</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Mampu mendesain pengalaman belajar bermakna dengan mengintegrasikan kolaborasi dan teknologi digital secara tepat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                <h4 class="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                    <i data-lucide="award"></i> Simpulan Akademik
+                </h4>
+                <p class="text-slate-700 italic leading-relaxed">
+                    "Mahasiswa Teknologi Pendidikan perlu mengkaji kurikulum karena kurikulum merupakan dasar perancangan, pengembangan, implementasi, dan evaluasi sistem pembelajaran berbasis teknologi. Tanpa pemahaman kurikulum, teknologi pendidikan kehilangan arah pedagogis dan nilai strategisnya."
+                </p>
             </div>
         </section>
 
-        <!-- 3. Pengertian Kurikulum & Analogi -->
+        <!-- 2. Pengertian Kurikulum -->
         <section id="pengertian" class="scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Akar Kata & Makna</h2>
@@ -162,7 +216,7 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
                         </summary>
                         <div class="p-4 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Secara etimologis, kurikulum berasal dari bahasa Latin <em class="text-blue-600">"curere"</em> yang berarti berlari cepat, maju, menempuh, atau menjalani. Dalam konteks olahraga kuno, ini berarti lintasan pacu lari.
+                            Berasal dari bahasa Latin <em class="text-blue-600">"curere"</em> yang berarti berlari cepat atau menjalani lintasan pacu. Dalam pendidikan, ini adalah lintasan belajar siswa.
                         </div>
                     </details>
                     <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden">
@@ -171,130 +225,114 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
                         </summary>
                         <div class="p-4 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Awalnya dipahami sebagai <em class="italic">"a race course"</em> (lintasan lari), kemudian berkembang dalam dunia pendidikan sebagai rencana pengalaman belajar yang harus ditempuh siswa dari awal hingga akhir untuk memperoleh gelar atau kompetensi.
+                            Kini dipahami sebagai rencana pengalaman belajar yang disusun secara sistematis untuk mencapai kompetensi tertentu.
                         </div>
                     </details>
                 </div>
 
-                <div class="bg-slate-900 rounded-2xl p-8 text-white relative flex flex-col justify-center overflow-hidden">
-                    <div class="relative z-10">
-                        <h4 class="text-xl font-bold mb-4">Analogi: Learning Journey</h4>
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-blue-400 flex items-center justify-center text-blue-400">01</div>
-                                <div><p class="font-medium">Titik Start: Input/Potensi Mahasiswa</p></div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">02</div>
-                                <div><p class="font-medium text-blue-300">Lintasan: Kurikulum (Proses & Materi)</p></div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-full border-2 border-dashed border-green-400 flex items-center justify-center text-green-400">03</div>
-                                <div><p class="font-medium">Garis Finish: Capaian Lulusan</p></div>
-                            </div>
+                <div class="bg-slate-900 rounded-2xl p-8 text-white flex flex-col justify-center overflow-hidden">
+                    <h4 class="text-xl font-bold mb-6">Analogi: Learning Journey</h4>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full border-2 border-dashed border-blue-400 flex items-center justify-center text-blue-400">01</div>
+                            <p class="font-medium">Titik Start: Potensi Peserta Didik</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">02</div>
+                            <p class="font-medium text-blue-300">Lintasan: Kurikulum (Proses & Materi)</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full border-2 border-dashed border-green-400 flex items-center justify-center text-green-400">03</div>
+                            <p class="font-medium">Garis Finish: Capaian Lulusan</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Tokoh Kurikulum -->
-        <section id="tokoh" class="scroll-mt-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Perspektif Ahli</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
-                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                        <i data-lucide="user" class="text-slate-600"></i>
+        <!-- 3. Perbandingan Kurikulum SP vs PT -->
+        <section id="perbandingan" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Satuan Pendidikan vs Perguruan Tinggi</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Memahami perbedaan fundamental antara pedoman sekolah dengan pendidikan tinggi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <!-- Regulasi -->
+                <div class="bg-white p-6 rounded-xl border border-l-4 border-l-blue-500 shadow-sm">
+                    <h4 class="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider">Landasan & Regulasi</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 block mb-1">Sekolah (SD/SMP/SMA):</span>
+                            <p class="text-sm text-slate-600">Kebijakan pemerintah pusat, bersifat terstandar nasional (Kurikulum Merdeka).</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 block mb-1">Perguruan Tinggi:</span>
+                            <p class="text-sm text-slate-600">Dikembangkan secara otonom oleh kampus sesuai visi keilmuan spesifik.</p>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Ralph W. Tyler</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Traditionalist</p>
-                    <p class="text-sm text-slate-600 italic">"Segala pengalaman belajar yang direncanakan dan diarahkan oleh sekolah untuk mencapai tujuan pendidikan."</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
-                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                        <i data-lucide="user" class="text-slate-600"></i>
+                <!-- Tujuan -->
+                <div class="bg-white p-6 rounded-xl border border-l-4 border-l-emerald-500 shadow-sm">
+                    <h4 class="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider">Tujuan Utama</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 block mb-1">Sekolah (SD/SMP/SMA):</span>
+                            <p class="text-sm text-slate-600">Membentuk karakter dasar, literasi, dan kompetensi umum siswa.</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-teal-600 block mb-1">Perguruan Tinggi:</span>
+                            <p class="text-sm text-slate-600">Menyiapkan tenaga ahli profesional, praktisi, dan peneliti handal.</p>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Hilda Taba</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Grassroots Model</p>
-                    <p class="text-sm text-slate-600 italic">"Sebuah rencana untuk belajar; yang berisi tujuan, pemilihan materi, dan organisasi pengalaman belajar."</p>
                 </div>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
-                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                        <i data-lucide="user" class="text-slate-600"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Peter F. Oliva</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">System Approach</p>
-                    <p class="text-sm text-slate-600 italic">"Kurikulum adalah rencana atau program untuk semua pengalaman yang dipelajari siswa di bawah bimbingan sekolah."</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl border border-slate-200 card-hover">
-                    <div class="w-12 h-12 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                        <i data-lucide="user" class="text-slate-600"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Nana S.S</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3 uppercase">Indonesian Perspective</p>
-                    <p class="text-sm text-slate-600 italic">"Suatu rencana yang memberi pedoman atau pegangan dalam proses belajar mengajar."</p>
+            <!-- Tabel Ringkasan -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="table-container">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-xs font-bold text-slate-600 uppercase">
+                                <th class="px-6 py-4">Aspek</th>
+                                <th class="px-6 py-4">Kurikulum Sekolah</th>
+                                <th class="px-6 py-4">Kurikulum Perguruan Tinggi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr class="border-b border-slate-50">
+                                <td class="px-6 py-4 font-semibold text-slate-900">Orientasi</td>
+                                <td class="px-6 py-4">Pembentukan dasar & karakter</td>
+                                <td class="px-6 py-4">Pengembangan keahlian profesional</td>
+                            </tr>
+                            <tr class="border-b border-slate-50 bg-slate-50/30">
+                                <td class="px-6 py-4 font-semibold text-slate-900">Struktur</td>
+                                <td class="px-6 py-4">Mata pelajaran yang tetap</td>
+                                <td class="px-6 py-4">Mata kuliah yang lebih fleksibel</td>
+                            </tr>
+                            <tr class="border-b border-slate-50">
+                                <td class="px-6 py-4 font-semibold text-slate-900">Kemandirian</td>
+                                <td class="px-6 py-4">Bimbingan intensif dari guru</td>
+                                <td class="px-6 py-4">Mandiri & tanggung jawab pribadi</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Sintesis Diagram -->
-        <section class="bg-blue-900 rounded-3xl p-12 text-white">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-2xl font-bold mb-12">Sintesis: Anatomi Kurikulum</h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">TUJUAN<br>(Aims)</div>
-                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
-                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">ISI<br>(Content)</div>
-                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
-                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">PROSES<br>(Method)</div>
-                    <div class="hidden md:block w-8 h-0.5 bg-blue-400"></div>
-                    <div class="w-40 h-40 border-2 border-blue-400 rounded-full flex items-center justify-center text-center p-4 text-sm font-bold bg-blue-800">EVALUASI<br>(Assessment)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Dokumen vs Proses -->
-        <section class="scroll-mt-24">
-            <div class="grid md:grid-cols-2 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-                <div class="bg-white p-10">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i data-lucide="file-text" class="text-blue-600"></i>
-                        <h3 class="text-xl font-bold">Kurikulum sebagai Dokumen</h3>
-                    </div>
-                    <ul class="space-y-3 text-sm text-slate-700">
-                        <li class="flex gap-2"><span>•</span> Dokumen tertulis (RPS, Silabus).</li>
-                        <li class="flex gap-2"><span>•</span> Standar kompetensi lulusan.</li>
-                        <li class="flex gap-2"><span>•</span> Pedoman tertulis bagi dosen/guru.</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-50 p-10">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i data-lucide="users" class="text-blue-600"></i>
-                        <h3 class="text-xl font-bold">Kurikulum sebagai Proses</h3>
-                    </div>
-                    <ul class="space-y-3 text-sm text-slate-700">
-                        <li class="flex gap-2"><span>•</span> Interaksi nyata di ruang kelas.</li>
-                        <li class="flex gap-2"><span>•</span> Implementasi strategi pembelajaran.</li>
-                        <li class="flex gap-2"><span>•</span> Pengalaman belajar (Learning Experience).</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Konsep Dasar -->
+        <!-- 4. Konsep Dasar -->
         <section id="konsep" class="scroll-mt-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">4 Konsep Dasar Utama</h2>
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">4 Konsep Dasar Kurikulum</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
                         <i data-lucide="layers"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Sistem</h4>
-                        <p class="text-sm text-slate-600">Kumpulan komponen yang saling berhubungan (tujuan, materi, metode, evaluasi) untuk mencapai hasil tertentu.</p>
+                        <h4 class="font-bold text-lg mb-2">Sebagai Sistem</h4>
+                        <p class="text-sm text-slate-600">Komponen yang saling terhubung (tujuan, isi, metode, evaluasi) untuk mencapai hasil belajar.</p>
                     </div>
                 </div>
                 <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
@@ -302,8 +340,8 @@
                         <i data-lucide="map"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Rencana</h4>
-                        <p class="text-sm text-slate-600">Blue print atau rancangan instruksional yang dipersiapkan sebelum interaksi belajar terjadi.</p>
+                        <h4 class="font-bold text-lg mb-2">Sebagai Rencana</h4>
+                        <p class="text-sm text-slate-600">Rancangan atau pedoman (blue print) tertulis sebelum proses pembelajaran dimulai.</p>
                     </div>
                 </div>
                 <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
@@ -311,8 +349,8 @@
                         <i data-lucide="activity"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Pengalaman</h4>
-                        <p class="text-sm text-slate-600">Totalitas apa yang dirasakan, dipikirkan, dan dilakukan mahasiswa selama masa studi.</p>
+                        <h4 class="font-bold text-lg mb-2">Sebagai Pengalaman</h4>
+                        <p class="text-sm text-slate-600">Segala hal yang dialami dan dilakukan peserta didik selama menempuh pendidikan.</p>
                     </div>
                 </div>
                 <div class="flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
@@ -320,66 +358,34 @@
                         <i data-lucide="target"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-2">Kurikulum sebagai Alat Tujuan</h4>
-                        <p class="text-sm text-slate-600">Instrumen strategis untuk mencetak profil lulusan yang sesuai dengan kebutuhan zaman.</p>
+                        <h4 class="font-bold text-lg mb-2">Sebagai Alat Tujuan</h4>
+                        <p class="text-sm text-slate-600">Instrumen untuk mencetak lulusan yang sesuai dengan kebutuhan masa depan.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 8. Aktivitas -->
+        <!-- 5. Aktivitas -->
         <section id="aktivitas" class="bg-slate-100 rounded-3xl p-10 border border-slate-200">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                <i data-lucide="pencil-line" class="text-blue-600"></i> Ruang Refleksi & Aktivitas
+                <i data-lucide="pencil-line" class="text-blue-600"></i> Ruang Refleksi
             </h2>
             <div class="space-y-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold mb-3 text-blue-700">Pertanyaan Reflektif:</h4>
-                    <p class="text-slate-700 mb-4 text-sm">"Jika Anda diminta merancang sebuah kursus online, mana yang akan Anda prioritaskan lebih dulu: dokumen kurikulumnya atau pengalaman belajarnya? Mengapa?"</p>
-                    <textarea class="w-full border rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none" rows="3" placeholder="Tulis refleksi singkat Anda di sini..."></textarea>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-400">
-                        <h4 class="font-bold mb-2">Studi Kasus</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Analisis dampak ketidaksesuaian antara RPS (dokumen) dan metode ceramah satu arah (proses) terhadap pencapaian kompetensi lulusan TP.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-400">
-                        <h4 class="font-bold mb-2">Diskusi Forum</h4>
-                        <p class="text-sm text-slate-600 mb-4">Bagikan pandangan Anda di forum LMS mengenai sinergi antara Desain Instruksional dan Pengembangan Kurikulum.</p>
-                        <button class="text-blue-600 text-sm font-bold hover:underline">Buka Forum &rarr;</button>
-                    </div>
+                    <h4 class="font-bold mb-3 text-blue-700">Tugas Mandiri:</h4>
+                    <p class="text-slate-700 mb-4 text-sm">"Jika kurikulum adalah sebuah peta, maka Teknologi Pendidikan adalah kendaraannya. Mengapa pengendara kendaraan tersebut tetap harus menguasai cara membaca peta dengan baik?"</p>
+                    <textarea class="w-full border rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none" rows="3" placeholder="Tulis pendapat Anda di sini..."></textarea>
                 </div>
             </div>
         </section>
 
-        <!-- 9. Rangkuman -->
-        <section class="scroll-mt-24">
-            <div class="bg-white border-2 border-slate-900 rounded-2xl p-8 relative">
-                <div class="absolute -top-4 left-8 bg-slate-900 text-white px-4 py-1 text-sm font-bold rounded">Rangkuman</div>
-                <div class="grid md:grid-cols-2 gap-8 mt-4">
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-2 text-sm">
-                            <i data-lucide="check-circle-2" class="text-green-500 w-5 h-5 shrink-0"></i>
-                            <span>Kurikulum adalah rencana sekaligus pengalaman belajar.</span>
-                        </li>
-                    </ul>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-2 text-sm">
-                            <i data-lucide="check-circle-2" class="text-green-500 w-5 h-5 shrink-0"></i>
-                            <span>Pentingnya keselarasan antara dokumen tertulis dan proses nyata.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. Referensi -->
+        <!-- 6. Referensi -->
         <section class="pb-20 border-t border-slate-200 pt-12">
             <h3 class="text-lg font-bold mb-6">Referensi Akademik</h3>
             <div class="space-y-4 text-xs md:text-sm text-slate-500 font-light">
-                <p>Oliva, P. F., & Gordon, W. R. (2012). <em>Developing the curriculum</em>. Pearson Higher Ed.</p>
-                <p>Sukmadinata, N. S. (2017). <em>Pengembangan Kurikulum: Teori dan Praktek</em>. PT Remaja Rosdakarya.</p>
-                <p>Tyler, R. W. (2013). <em>Basic principles of curriculum and instruction</em>. University of Chicago Press.</p>
+                <p>Sukmadinata, N. S. (2008). <em>Pengembangan Kurikulum: Teori dan Praktek</em>. PT Remaja Rosdakarya.</p>
+                <p>Tyler, R. W. (1975). <em>Basic Principles of Curriculum and Instruction</em>. University of Chicago Press.</p>
+                <p>Oliva, P. F. (2012). <em>Developing the Curriculum</em>. Pearson.</p>
             </div>
         </section>
 
@@ -387,12 +393,11 @@
 
     <footer class="bg-slate-900 text-slate-400 py-12 px-6 border-t border-slate-800">
         <div class="max-w-5xl mx-auto text-center md:text-left text-sm">
-            &copy; 2025 Prodi Teknologi Pendidikan. Modul Digital Interaktif.
+            &copy; 2025 Prodi Teknologi Pendidikan. Modul Digital Interaktif Pertemuan 1.
         </div>
     </footer>
 
     <script>
-        // Pastikan pustaka Lucide sudah dimuat sebelum dijalankan
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
