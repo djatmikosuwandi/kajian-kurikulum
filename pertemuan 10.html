@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Web: Kajian Kurikulum - Organisasi Kurikulum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="book-open" class="text-blue-600"></i>
+                    <span class="font-bold text-xl text-slate-900">Kajian Kurikulum</span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#pengantar" class="hover:text-blue-600 transition">Pengantar</a>
+                    <a href="#landasan" class="hover:text-blue-600 transition">Landasan</a>
+                    <a href="#pola" class="hover:text-blue-600 transition">Pola Organisasi</a>
+                    <a href="#prinsip" class="hover:text-blue-600 transition">Prinsip</a>
+                    <a href="#refleksi" class="px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Tugas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="bg-gradient-to-br from-blue-900 to-indigo-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="bg-blue-800/50 text-blue-200 text-sm font-semibold px-4 py-1.5 rounded-full inline-block mb-4">Pertemuan Ke-9</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Organisasi Kurikulum</h1>
+            <p class="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                Menyelami lebih dalam mengapa organisasi kurikulum itu penting, apa saja pilihannya, dan bagaimana prinsip klasik tetap relevan dalam Kurikulum Merdeka.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- Bagian A: Pengantar -->
+        <section id="pengantar" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2 bg-blue-100 rounded-lg text-blue-600"><i data-lucide="compass"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Mengapa Organisasi Penting?</h2>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="md:flex gap-8 items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 bg-slate-100 p-6 rounded-xl text-center border-2 border-dashed border-slate-300">
+                        <i data-lucide="home" class="w-16 h-16 mx-auto text-slate-400 mb-2"></i>
+                        <p class="text-sm text-slate-500 italic">Ilustrasi: Arsitektur Rumah</p>
+                    </div>
+                    <div class="md:w-2/3 space-y-4">
+                        <p>Bayangkan Anda hendak membangun rumah. Anda punya material: batu bata, kayu, kaca, semen. Tapi jika Anda tumpuk begitu saja tanpa blueprint—tanpa rencana arsitektur—rumah itu tidak akan kokoh, tidak fungsional, dan mungkin bahkan roboh.</p>
+                        <p><strong>Kurikulum juga begitu.</strong> Kita punya 'material': kompetensi, materi pembelajaran, kegiatan, penilaian. Tapi tanpa organisasi yang baik, semua itu hanya tumpukan informasi yang tidak bermakna bagi peserta didik. <em>Organisasi kurikulum adalah arsitektur pembelajaran.</em></p>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+                            <p class="text-sm text-blue-900">
+                                <strong>Catatan Kurikulum Merdeka:</strong> Dulu kita berbicara 'mata pelajaran' yang terpisah. Sekarang kita berbicara 'capaian pembelajaran' dan 'alur tujuan pembelajaran' yang terintegrasi. Ini adalah perubahan paradigma organisasi kurikulum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian B: Landasan -->
+        <section id="landasan" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2 bg-indigo-100 rounded-lg text-indigo-600"><i data-lucide="layers"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Landasan Organisasi Kurikulum</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Filosofis -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="book-heart" class="text-indigo-500"></i>
+                        <h3 class="font-bold text-lg">1. Landasan Filosofis</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-3">Perdebatan klasik antara:</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><span class="text-indigo-500 mr-2">•</span> <strong>Perenialisme:</strong> Kebenaran abadi. Implikasinya <em>Subject-centered</em> (terpisah, akademis).</li>
+                        <li class="flex items-start"><span class="text-indigo-500 mr-2">•</span> <strong>Progresivisme:</strong> Pengetahuan ada dalam pengalaman. Implikasinya <em>Experience-centered</em> (berbasis kebutuhan anak).</li>
+                    </ul>
+                </div>
+
+                <!-- Psikologis -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="brain" class="text-pink-500"></i>
+                        <h3 class="font-bold text-lg">2. Landasan Psikologis</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-3">Bagaimana anak belajar?</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><span class="text-pink-500 mr-2">•</span> <strong>Bruner:</strong> <em>Spiral curriculum</em> (konsep diajarkan berulang dengan kedalaman bertingkat).</li>
+                        <li class="flex items-start"><span class="text-pink-500 mr-2">•</span> <strong>Vygotsky:</strong> ZPD (Zone of Proximal Development). Kurikulum harus memungkinkan <em>scaffolding</em>.</li>
+                    </ul>
+                </div>
+
+                <!-- Sosial -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="users" class="text-orange-500"></i>
+                        <h3 class="font-bold text-lg">3. Landasan Sosial</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-3">Kurikulum harus relevan dengan kebutuhan masyarakat.</p>
+                    <p class="text-sm">Melahirkan <em>problem-centered design</em>. Contoh: "Hari ini kita mengatasi masalah sampah di lingkungan sekitar" (melibatkan biologi, sosial, ekonomi).</p>
+                </div>
+
+                <!-- Keilmuan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="flask-conical" class="text-emerald-500"></i>
+                        <h3 class="font-bold text-lg">4. Landasan Keilmuan</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-3">Bagaimana struktur ilmu itu sendiri?</p>
+                    <p class="text-sm">Ada unidisciplinary, multidisciplinary, interdisciplinary, dan <strong>transdisciplinary</strong> (melewati batas disiplin sama sekali). Kurikulum Merdeka menuju transdisciplinary.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian C: Pola Organisasi (Tabs) -->
+        <section id="pola" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2 bg-purple-100 rounded-lg text-purple-600"><i data-lucide="layout-dashboard"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">4 Pola Organisasi Kurikulum</h2>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <!-- Tab Headers -->
+                <div class="flex flex-wrap border-b border-slate-200 bg-slate-50">
+                    <button onclick="openTab('tab1')" class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-slate-600 hover:text-purple-600 hover:bg-white border-b-2 border-transparent transition focus:outline-none" id="btn-tab1">1. Subject-Centered</button>
+                    <button onclick="openTab('tab2')" class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-slate-600 hover:text-purple-600 hover:bg-white border-b-2 border-transparent transition focus:outline-none" id="btn-tab2">2. Learner-Centered</button>
+                    <button onclick="openTab('tab3')" class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-slate-600 hover:text-purple-600 hover:bg-white border-b-2 border-transparent transition focus:outline-none" id="btn-tab3">3. Problem-Centered</button>
+                    <button onclick="openTab('tab4')" class="tab-btn flex-1 py-4 px-6 text-sm font-bold text-purple-700 hover:bg-white border-b-2 border-transparent transition focus:outline-none flex items-center justify-center gap-2" id="btn-tab4">
+                        4. Integrated <i data-lucide="star" class="w-4 h-4 fill-purple-400"></i>
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="p-6 md:p-8">
+                    <!-- Content 1 -->
+                    <div id="tab1" class="tab-content">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Subject-Centered Design</h3>
+                        <p class="text-slate-600 mb-4">Paling klasik, familiar, dan mudah diorganisir. Tapi bisa terlalu akademis dan terpisah dari kehidupan nyata.</p>
+                        <div class="space-y-4">
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">a. Correlated Curriculum</h4>
+                                <p class="text-sm mt-1">Mata pelajaran terpisah tapi ada koordinasi. Contoh: IPA mengajar gerak, Matematika sinkron mengajar rumus kecepatan.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">b. Broad Fields Curriculum</h4>
+                                <p class="text-sm mt-1">Bidang luas. Beberapa subjek digabung. Contoh: IPA (gabungan Fisika, Kimia, Biologi).</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">c. Core Curriculum</h4>
+                                <p class="text-sm mt-1">Ada 'inti' yang wajib dipelajari semua, plus 'elektif/peminatan' yang dipilih sesuai minat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content 2 -->
+                    <div id="tab2" class="tab-content">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Learner-Centered Design</h3>
+                        <p class="text-slate-600 mb-4">Berpusat pada peserta didik, bukan pada subjek pelajaran.</p>
+                        <div class="space-y-4">
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">a. Activity Curriculum (John Dewey)</h4>
+                                <p class="text-sm mt-1">"Learn by doing". Disusun dari aktivitas anak. Belajar sains sambil menanam di kebun, matematika sambil memasak.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">b. Experience Curriculum</h4>
+                                <p class="text-sm mt-1">Kurikulum dibangun dari pengalaman hidup anak. Pengalaman pribadi menjadi titik tolak, bukan konsep abstrak.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content 3 -->
+                    <div id="tab3" class="tab-content">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Problem-Centered Design</h3>
+                        <p class="text-slate-600 mb-4">Menyeimbangkan: tetap relevan dengan kehidupan, tapi terstruktur.</p>
+                        <div class="space-y-4">
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">a. Life-Situation Design</h4>
+                                <p class="text-sm mt-1">Organisasi berdasarkan situasi kehidupan (misal: "Memilih karir"). Melibatkan psikologi, ekonomi, etika secara alami.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">b. Social Problem Design</h4>
+                                <p class="text-sm mt-1">Fokus pada masalah sosial (kemiskinan, iklim). Anak diajak menganalisis dan mencari solusi.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-purple-700">c. Reconstruction Design</h4>
+                                <p class="text-sm mt-1">Kurikulum untuk merekonstruksi masyarakat. Mempersenjatai anak untuk menjadi agen perubahan sosial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content 4 -->
+                    <div id="tab4" class="tab-content">
+                        <div class="flex items-center gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-slate-800">Integrated Curriculum (Fokus Utama)</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded">Kurikulum Merdeka</span>
+                        </div>
+                        <p class="text-slate-600 mb-4">Integrasi bisa terjadi dalam berbagai level. Harus dipahami dengan hati-hati agar tidak tertukar.</p>
+                        <div class="space-y-4">
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h4 class="font-bold text-purple-800 text-lg">a. Multidisciplinary</h4>
+                                <p class="text-sm mt-1 mb-2">Beberapa disiplin ilmu tetap berdiri sendiri, tapi diajarkan dalam <strong>tema bersama</strong>.</p>
+                                <p class="text-xs text-purple-700 italic">Contoh Tema 'Air': Matematika menghitung volume, Bahasa menulis puisi air. Guru mengajar masing-masing.</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h4 class="font-bold text-purple-800 text-lg">b. Interdisciplinary</h4>
+                                <p class="text-sm mt-1 mb-2">Batas antar disiplin mulai kabur. Guru berkolaborasi merancang aktivitas yang tak bisa dipisah ke dalam subjek.</p>
+                                <p class="text-xs text-purple-700 italic">Contoh: "Penyelidikan krisis air". Melibatkan sains dan sosial sekaligus dalam satu aktivitas bersama.</p>
+                            </div>
+                            <div class="bg-purple-100 p-4 rounded-lg border border-purple-300 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 p-2 opacity-10"><i data-lucide="crown" class="w-16 h-16"></i></div>
+                                <h4 class="font-bold text-purple-900 text-lg">c. Transdisciplinary</h4>
+                                <p class="text-sm mt-1 mb-2"><strong>Level Tertinggi.</strong> Tidak ada lagi subjek. Berpusat pada masalah autentik menggunakan ilmu dari berbagai sumber (akademik, lokal, industri).</p>
+                                <p class="text-xs text-purple-800 italic font-semibold">Contoh: Projek Penguatan Profil Pelajar Pancasila (P5). Anak mengkaji "Mengapa ikan sedikit" dari wawancara nelayan hingga data statistik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian D: Prinsip -->
+        <section id="prinsip" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2 bg-emerald-100 rounded-lg text-emerald-600"><i data-lucide="check-circle"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">5 Prinsip Organisasi Kurikulum</h2>
+            </div>
+            <p class="text-slate-600 mb-6">Kriteria keberhasilan dari Tyler (1975) dan Oliva (1992):</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                    <h4 class="font-bold text-emerald-700 mb-2">1. Continuity</h4>
+                    <p class="text-sm text-slate-600">Kesinambungan. Konsep fundamental diulang kembali. Contoh: Persamaan linear dari SD hingga kuliah.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                    <h4 class="font-bold text-emerald-700 mb-2">2. Sequence</h4>
+                    <p class="text-sm text-slate-600">Urutan progresif. Bukan cuma diulang, tapi diperdalam (spiral). Dari bentuk daun ke biokimia fotosintesis.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                    <h4 class="font-bold text-emerald-700 mb-2">3. Integration</h4>
+                    <p class="text-sm text-slate-600">Keterkaitan. Tujuan, materi, dan penilaian harus selaras dan terintegrasi.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                    <h4 class="font-bold text-emerald-700 mb-2">4. Scope</h4>
+                    <p class="text-sm text-slate-600">Cakupan komprehensif. Tidak hanya akademik, tapi juga sosial-emosional dan psikomotorik.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                    <h4 class="font-bold text-emerald-700 mb-2">5. Balance</h4>
+                    <p class="text-sm text-slate-600">Keseimbangan antara teori & praktik, individu & sosial, masa kini & masa depan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian E: Perbandingan Terminologi -->
+        <section id="terminologi" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2 bg-rose-100 rounded-lg text-rose-600"><i data-lucide="table"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Pendekatan, Metode, Model & Strategi</h2>
+            </div>
+            
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-700">
+                            <th class="p-4 border-b font-semibold">Aspek</th>
+                            <th class="p-4 border-b font-semibold">Fokus</th>
+                            <th class="p-4 border-b font-semibold">Contoh dalam Organisasi Kurikulum</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-700">
+                        <tr class="border-b hover:bg-slate-50">
+                            <td class="p-4 font-bold text-rose-700">PENDEKATAN</td>
+                            <td class="p-4">Filosofis/Paradigmatik (Analogi: Ideologi)</td>
+                            <td class="p-4">Behavioristik, konstruktivistik, humanistik</td>
+                        </tr>
+                        <tr class="border-b hover:bg-slate-50">
+                            <td class="p-4 font-bold text-rose-700">METODE</td>
+                            <td class="p-4">Cara umum penyampaian (Analogi: Kendaraan)</td>
+                            <td class="p-4">Ceramah, diskusi, demonstrasi, proyek</td>
+                        </tr>
+                        <tr class="border-b hover:bg-slate-50">
+                            <td class="p-4 font-bold text-rose-700">MODEL</td>
+                            <td class="p-4">Desain sistematis lengkap (Analogi: Rute lengkap)</td>
+                            <td class="p-4">Direct Instruction, Inquiry, PBL, Cooperative</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 font-bold text-rose-700">STRATEGI</td>
+                            <td class="p-4">Rencana operasional spesifik (Analogi: Trik mengemudi)</td>
+                            <td class="p-4">Jigsaw, Think-Pair-Share, Mind Mapping</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4 p-4 bg-rose-50 rounded-lg border border-rose-200 text-sm">
+                <strong>Koneksi Kritis:</strong> Organisasi kurikulum menentukan strategi apa yang mungkin digunakan. Kurikulum terpadu (Integrated) tidak bisa memakai model ceramah satu arah secara dominan; ia butuh strategi kolaboratif (seperti Jigsaw atau PBL).
+            </div>
+        </section>
+
+        <!-- Penutup & Refleksi -->
+        <section id="refleksi" class="bg-slate-900 text-white rounded-2xl p-8 shadow-xl mt-12">
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                <i data-lucide="edit-3"></i> Tugas Refleksi
+            </h2>
+            <p class="mb-6 text-slate-300">Untuk pertemuan depan, buatlah jurnal reflektif di bawah ini. Jawaban Anda akan disimpan sebagai bahan diskusi.</p>
+            
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <label class="block text-sm font-medium mb-2 text-slate-200">Jika Anda menjadi kepala sekolah, pola organisasi kurikulum apa yang akan Anda pilih? Sebutkan 3 alasan merujuk pada landasan & prinsip hari ini!</label>
+                <textarea id="refleksiText" rows="4" class="w-full p-3 rounded-lg bg-slate-900 border border-slate-600 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4" placeholder="Ketik jawaban Anda di sini..."></textarea>
+                <button onclick="submitRefleksi()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-lg transition shadow-lg w-full sm:w-auto">
+                    Kirim Refleksi
+                </button>
+                <div id="submitMsg" class="hidden mt-4 p-3 bg-green-900/50 text-green-300 border border-green-700 rounded-lg text-sm">
+                    Tugas berhasil disimpan untuk diskusi minggu depan. Terima kasih!
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-slate-700 pt-6 text-center italic text-slate-400">
+                "Kurikulum Merdeka yang kita jalankan sekarang—di mana letaknya dalam spektrum ini? Apakah sudah cukup terintegrasi, atau masih terjebak dalam subject-centered yang menyamar?"
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-slate-500 text-sm mt-12">
+        <p>&copy; 2026 Modul Kajian Kurikulum. Dibuat untuk keperluan akademik.</p>
+    </footer>
+
+    <script>
+        // Inisialisasi Icons Lucide
+        lucide.createIcons();
+
+        // Fungsi Logika Tabs
+        function openTab(tabId) {
+            // Sembunyikan semua konten tab
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            // Reset gaya semua tombol tab
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-purple-600', 'text-purple-700', 'bg-white');
+                btn.classList.add('border-transparent');
+            });
+            
+            // Tampilkan konten yang dipilih
+            document.getElementById(tabId).classList.add('active');
+            // Ganti gaya tombol yang aktif
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('border-transparent');
+            activeBtn.classList.add('border-purple-600', 'bg-white');
+            if(tabId !== 'tab4') {
+                 activeBtn.classList.add('text-purple-700');
+            }
+        }
+
+        // Buka tab default saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            openTab('tab4'); // Default ke Integrated Curriculum sesuai FOKUS UTAMA
+        });
+
+        // Simulasi submit tugas
+        function submitRefleksi() {
+            const text = document.getElementById('refleksiText').value;
+            const msg = document.getElementById('submitMsg');
+            if(text.trim() === '') {
+                // Inline message instead of alert
+                msg.textContent = "Silakan isi refleksi Anda terlebih dahulu.";
+                msg.className = "mt-4 p-3 bg-red-900/50 text-red-300 border border-red-700 rounded-lg text-sm block";
+            } else {
+                msg.textContent = "Tugas berhasil disimpan untuk diskusi minggu depan. Terima kasih!";
+                msg.className = "mt-4 p-3 bg-green-900/50 text-green-300 border border-green-700 rounded-lg text-sm block";
+                document.getElementById('refleksiText').value = ''; // clear
+            }
+        }
+    </script>
+</body>
+</html>
