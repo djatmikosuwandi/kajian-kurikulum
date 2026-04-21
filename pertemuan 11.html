@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Web: Kajian Kurikulum - Kurikulum Berbasis Kompetensi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="graduation-cap" class="text-teal-600"></i>
+                    <span class="font-bold text-xl text-slate-900">Kajian Kurikulum</span>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#pengantar" class="hover:text-teal-600 transition">Pengantar</a>
+                    <a href="#konsep" class="hover:text-teal-600 transition">Konsep Inti</a>
+                    <a href="#struktur" class="hover:text-teal-600 transition">Struktur</a>
+                    <a href="#fungsi" class="hover:text-teal-600 transition">Fungsi & Kritik</a>
+                    <a href="#refleksi" class="px-4 py-1.5 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition shadow-sm">Tugas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 text-white py-20 relative overflow-hidden">
+        <!-- Dekorasi Latar -->
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 opacity-10">
+            <i data-lucide="target" class="w-64 h-64"></i>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="bg-teal-700/50 text-teal-100 text-sm font-bold tracking-wider px-4 py-1.5 rounded-full inline-block mb-6 border border-teal-500/30">
+                PERTEMUAN KE-11
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Memahami Kurikulum <br/> Berbasis Kompetensi (KBK)
+            </h1>
+            <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto leading-relaxed">
+                Menggeser fokus dari <em>"apa yang diajarkan guru"</em> menjadi <em>"apa yang mampu dilakukan oleh peserta didik"</em>.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Bagian A: Pengantar -->
+        <section id="pengantar" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="p-2.5 bg-teal-100 rounded-xl text-teal-700"><i data-lucide="arrow-right-left"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Dari Konten ke Kompetensi</h2>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- Kolom Konten -->
+                    <div class="p-8 border-b md:border-b-0 md:border-r border-slate-100 bg-slate-50 text-center">
+                        <i data-lucide="book" class="w-12 h-12 mx-auto text-slate-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-slate-700 mb-2">Content-Based</h3>
+                        <p class="text-sm text-slate-500 mb-4">Fokus pada penyelesaian materi pelajaran.</p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200 text-sm font-medium text-slate-600 shadow-sm">
+                            "Hari ini saya harus mengajarkan Bab 3."
+                        </div>
+                    </div>
+                    <!-- Kolom Kompetensi -->
+                    <div class="p-8 bg-teal-50 text-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10"><i data-lucide="award" class="w-16 h-16 text-teal-900"></i></div>
+                        <i data-lucide="check-circle-2" class="w-12 h-12 mx-auto text-teal-600 mb-4 relative z-10"></i>
+                        <h3 class="text-xl font-bold text-teal-800 mb-2 relative z-10">Competency-Based</h3>
+                        <p class="text-sm text-teal-600/80 mb-4 relative z-10">Fokus pada kemampuan akhir peserta didik.</p>
+                        <div class="bg-white p-3 rounded-lg border border-teal-200 text-sm font-medium text-teal-800 shadow-sm relative z-10">
+                            "Apa yang harus bisa dilakukan siswa setelah belajar?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analogi -->
+            <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
+                <h4 class="font-bold text-blue-900 flex items-center gap-2 mb-2">
+                    <i data-lucide="waves" class="w-5 h-5"></i> Analogi Berenang
+                </h4>
+                <p class="text-slate-700 leading-relaxed">
+                    Bayangkan Anda belajar berenang. Dalam kurikulum <strong>berbasis konten</strong>, Anda mungkin belajar teori: gaya bebas, gaya dada, hukum Archimedes. Tapi tidak pernah masuk ke air. <br><br>
+                    Dalam kurikulum <strong>berbasis kompetensi</strong>, ukuran keberhasilannya sederhana: <span class="font-bold text-blue-700">Anda bisa berenang atau tidak.</span> Kompetensi itu bukan sekadar tahu, tetapi mampu melakukan dan menunjukkan performa nyata.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bagian B: Konsep Inti -->
+        <section id="konsep" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="p-2.5 bg-indigo-100 rounded-xl text-indigo-700"><i data-lucide="lightbulb"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Konsep Inti KBK</h2>
+            </div>
+
+            <!-- Rumus Kompetensi -->
+            <div class="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-2xl p-8 shadow-lg text-center mb-10 text-white transform hover:scale-[1.01] transition-transform">
+                <p class="text-indigo-200 mb-2 text-sm uppercase tracking-widest font-bold">Rumus Sederhana</p>
+                <h3 class="text-2xl md:text-4xl font-extrabold mb-6">
+                    Kompetensi = <span class="text-yellow-400">Tahu</span> + <span class="text-emerald-400">Bisa</span> + <span class="text-rose-400">Mau</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white/10 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                        <span class="block text-yellow-400 font-bold mb-1">Knowledge</span>
+                        (Pengetahuan)
+                    </div>
+                    <div class="bg-white/10 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                        <span class="block text-emerald-400 font-bold mb-1">Skills</span>
+                        (Keterampilan)
+                    </div>
+                    <div class="bg-white/10 rounded-lg p-3 backdrop-blur-sm border border-white/20">
+                        <span class="block text-rose-400 font-bold mb-1">Attitudes</span>
+                        (Sikap / Etika)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karakteristik List -->
+            <h4 class="text-xl font-bold mb-4 text-slate-800">Karakteristik Utama</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-indigo-100 p-2 rounded-lg text-indigo-600 shrink-0"><i data-lucide="target"></i></div>
+                    <div>
+                        <h5 class="font-bold text-slate-800">Berorientasi Hasil Belajar</h5>
+                        <p class="text-sm text-slate-500 mt-1">Fokus pada capaian (learning outcomes), bukan hanya proses semata.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-indigo-100 p-2 rounded-lg text-indigo-600 shrink-0"><i data-lucide="activity"></i></div>
+                    <div>
+                        <h5 class="font-bold text-slate-800">Berbasis Performa</h5>
+                        <p class="text-sm text-slate-500 mt-1">Penilaian didasarkan pada apa yang secara nyata bisa dilakukan siswa.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-indigo-100 p-2 rounded-lg text-indigo-600 shrink-0"><i data-lucide="users"></i></div>
+                    <div>
+                        <h5 class="font-bold text-slate-800">Individualized Learning</h5>
+                        <p class="text-sm text-slate-500 mt-1">Mengakomodasi perbedaan tingkat kemampuan masing-masing siswa.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-indigo-100 p-2 rounded-lg text-indigo-600 shrink-0"><i data-lucide="medal"></i></div>
+                    <div>
+                        <h5 class="font-bold text-slate-800">Mastery Learning</h5>
+                        <p class="text-sm text-slate-500 mt-1">Siswa belajar sampai tuntas menguasai kompetensi, bukan sekadar selesai bab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian C: Struktur -->
+        <section id="struktur" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-2.5 bg-rose-100 rounded-xl text-rose-700"><i data-lucide="git-merge"></i></div>
+                <h2 class="text-3xl font-bold text-slate-900">Struktur KBK</h2>
+            </div>
+            <p class="text-slate-600 mb-6">Penting untuk memahami transformasi nomenklatur dari Kurikulum 2013 menuju Kurikulum Merdeka, karena keduanya berakar pada kompetensi.</p>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap border-b border-slate-200 mb-6 gap-2">
+                <button onclick="openTab('tab-k13')" id="btn-k13" class="px-6 py-3 font-semibold text-rose-700 border-b-2 border-rose-600 focus:outline-none transition-all">Kurikulum 2013</button>
+                <button onclick="openTab('tab-kurmer')" id="btn-kurmer" class="px-6 py-3 font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-700 focus:outline-none transition-all flex items-center gap-2">
+                    Kurikulum Merdeka <i data-lucide="sparkles" class="w-4 h-4 text-yellow-500"></i>
+                </button>
+            </div>
+
+            <!-- Tab Content K13 -->
+            <div id="tab-k13" class="tab-content active bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-center">
+                        <div class="w-16 text-center font-black text-rose-300 text-2xl">01</div>
+                        <div class="flex-1 bg-rose-50 p-4 rounded-lg border border-rose-100">
+                            <h4 class="font-bold text-rose-900">Standar Kompetensi Lulusan (SKL)</h4>
+                            <p class="text-sm text-rose-700 mt-1">Tujuan akhir / profil lulusan yang ingin dihasilkan. (Misal: mampu berpikir kritis & berkarakter).</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center pl-8 relative">
+                        <div class="absolute left-10 top-0 bottom-0 w-0.5 bg-rose-200 -z-10"></div>
+                        <div class="w-8 text-center"><i data-lucide="corner-down-right" class="text-rose-300 mx-auto"></i></div>
+                        <div class="flex-1 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                            <h4 class="font-bold text-slate-800">Kompetensi Inti (KI)</h4>
+                            <p class="text-sm text-slate-600 mt-1 mb-2">Kategori besar turunan SKL:</p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs font-semibold text-center">
+                                <span class="bg-slate-100 p-2 rounded">KI-1: Spiritual</span>
+                                <span class="bg-slate-100 p-2 rounded">KI-2: Sosial</span>
+                                <span class="bg-slate-100 p-2 rounded">KI-3: Pengetahuan</span>
+                                <span class="bg-slate-100 p-2 rounded">KI-4: Keterampilan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center pl-16 relative">
+                         <div class="absolute left-[72px] top-0 bottom-0 w-0.5 bg-slate-200 -z-10"></div>
+                        <div class="w-8 text-center"><i data-lucide="corner-down-right" class="text-slate-300 mx-auto"></i></div>
+                        <div class="flex-1 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-slate-800">Kompetensi Dasar (KD)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Kompetensi spesifik yang harus dicapai pada setiap mata pelajaran per tingkatan kelas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content Kurmer -->
+            <div id="tab-kurmer" class="tab-content bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 text-sm mb-6 rounded-r">
+                    <strong>Insight:</strong> Perubahan ini bukan sekadar administratif. Ini upaya menyederhanakan dan memperkuat fokus pada kompetensi utuh, tidak terfragmentasi.
+                </div>
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-center">
+                        <div class="w-16 text-center font-black text-slate-300 text-2xl">01</div>
+                        <div class="flex-1 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-slate-800">Standar Kompetensi Lulusan (SKL)</h4>
+                            <p class="text-sm text-slate-500 mt-1">Tetap ada sebagai muara akhir (Profil Pelajar Pancasila).</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center pl-8">
+                        <div class="w-8 text-center"><i data-lucide="corner-down-right" class="text-slate-300 mx-auto"></i></div>
+                        <div class="flex-1 bg-emerald-50 p-4 rounded-lg border border-emerald-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-emerald-900">Capaian Pembelajaran (CP)</h4>
+                                <span class="text-xs bg-emerald-200 text-emerald-800 px-2 py-0.5 rounded font-bold">Menggantikan KI & KD</span>
+                            </div>
+                            <p class="text-sm text-emerald-700 mt-1">Kompetensi pembelajaran yang harus dicapai pada setiap fase perkembangan.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center pl-16">
+                        <div class="w-8 text-center"><i data-lucide="corner-down-right" class="text-emerald-300 mx-auto"></i></div>
+                        <div class="flex-1 bg-white p-4 rounded-lg border border-emerald-200 shadow-sm border-l-4 border-l-emerald-500">
+                            <h4 class="font-bold text-slate-800">Alur Tujuan Pembelajaran (ATP)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Rangkaian tujuan pembelajaran yang tersusun sistematis dan logis di dalam fase secara utuh dan menurut urutan pembelajaran.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian D & E: Fungsi dan Kritik (Grid Layout) -->
+        <section id="fungsi" class="scroll-mt-24">
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- Kiri: Fungsi Internal & Eksternal -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-2.5 bg-blue-100 rounded-xl text-blue-700"><i data-lucide="settings"></i></div>
+                        <h2 class="text-2xl font-bold text-slate-900">Fungsi KBK</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 flex items-center gap-2 mb-2">
+                                <i data-lucide="school" class="w-5 h-5"></i> Fungsi Internal (Di Sekolah)
+                            </h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                                <li>Pedoman pembelajaran berbasis capaian.</li>
+                                <li>Alat evaluasi berbasis performa (proyek, portofolio).</li>
+                                <li>Pengarah strategi pembelajaran aktif.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <h4 class="font-bold text-blue-800 flex items-center gap-2 mb-2">
+                                <i data-lucide="globe" class="w-5 h-5"></i> Fungsi Eksternal (Luar Sekolah)
+                            </h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                                <li>Menyesuaikan dengan kebutuhan dunia kerja nyata.</li>
+                                <li>Menjawab tuntutan keterampilan Abad 21.</li>
+                                <li>Menghasilkan lulusan yang adaptif (Problem solving).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kanan: Kelebihan & Kritik -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-2.5 bg-amber-100 rounded-xl text-amber-700"><i data-lucide="scale"></i></div>
+                        <h2 class="text-2xl font-bold text-slate-900">Kelebihan & Kritik</h2>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="p-5 border-b border-slate-100 bg-emerald-50/50">
+                            <h4 class="font-bold text-emerald-700 flex items-center gap-2 mb-3">
+                                <i data-lucide="thumbs-up" class="w-5 h-5"></i> Kelebihan
+                            </h4>
+                            <ul class="text-sm text-slate-700 space-y-2">
+                                <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 mr-2 text-emerald-500 mt-0.5 shrink-0"></i> Relevan dengan dunia nyata.</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 mr-2 text-emerald-500 mt-0.5 shrink-0"></i> Mengembangkan keterampilan abad 21.</li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 mr-2 text-emerald-500 mt-0.5 shrink-0"></i> Fokus pembelajaran lebih bermakna.</li>
+                            </ul>
+                        </div>
+                        <div class="p-5 bg-rose-50/50">
+                            <h4 class="font-bold text-rose-700 flex items-center gap-2 mb-3">
+                                <i data-lucide="alert-triangle" class="w-5 h-5"></i> Kritik & Tantangan
+                            </h4>
+                            <ul class="text-sm text-slate-700 space-y-2">
+                                <li class="flex items-start"><i data-lucide="x" class="w-4 h-4 mr-2 text-rose-500 mt-0.5 shrink-0"></i> Sulit diimplementasikan massal.</li>
+                                <li class="flex items-start"><i data-lucide="x" class="w-4 h-4 mr-2 text-rose-500 mt-0.5 shrink-0"></i> Penilaian sangat kompleks (tidak sesederhana tes PG).</li>
+                                <li class="flex items-start"><i data-lucide="x" class="w-4 h-4 mr-2 text-rose-500 mt-0.5 shrink-0"></i> <strong>Risiko Reduksi:</strong> Kompetensi sering disederhanakan hanya jadi checklist administratif oleh guru.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Implikasi Praktik -->
+            <div class="mt-8 bg-slate-800 text-white p-6 rounded-2xl flex flex-col md:flex-row items-center gap-6 shadow-md">
+                <div class="shrink-0">
+                    <i data-lucide="plug" class="w-12 h-12 text-teal-400"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-2">Koneksi dengan Praktik Pembelajaran</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-3">
+                        KBK mutlak membutuhkan <em>Student-Centered Learning</em>. Kurikulum ini sangat cocok disandingkan dengan model pembelajaran seperti <strong>Problem-Based Learning (PBL)</strong>, <strong>Project-Based Learning (PjBL)</strong>, dan <strong>Inquiry</strong>.
+                    </p>
+                    <div class="bg-rose-500/20 text-rose-200 p-3 rounded-lg border border-rose-500/30 text-sm font-medium">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-1 -mt-0.5"></i> Critical Note: Jika Anda masih mengajar dengan ceramah penuh dan ujian hafalan, tapi mengklaim menggunakan KBK—itu adalah sebuah kontradiksi.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Penutup & Refleksi -->
+        <section id="refleksi" class="bg-teal-900 text-white rounded-2xl p-8 shadow-xl relative overflow-hidden">
+            <!-- Dekorasi -->
+            <div class="absolute -bottom-10 -right-10 opacity-10">
+                <i data-lucide="edit-3" class="w-64 h-64"></i>
+            </div>
+            
+            <h2 class="text-2xl font-bold mb-3 relative z-10">Tugas Reflektif</h2>
+            <p class="mb-8 text-teal-100 relative z-10 max-w-2xl">
+                Sebagai calon pendidik, pemahaman teori harus dibuktikan dengan kemampuan mendesain praktik. Silakan kerjakan tugas di bawah ini.
+            </p>
+            
+            <div class="bg-teal-950/60 p-6 rounded-xl border border-teal-700 relative z-10 backdrop-blur-sm">
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold mb-2 text-teal-50">Skenario:</label>
+                    <p class="text-sm text-teal-200 mb-4 bg-teal-900/50 p-3 rounded border border-teal-800">
+                        Pilih satu materi pelajaran. Ubah dari pendekatan berbasis konten menjadi berbasis kompetensi. Jelaskan: <br>
+                        1. Apa kompetensinya?<br>
+                        2. Bagaimana cara mengajarkannya?<br>
+                        3. Bagaimana cara menilainya?
+                    </p>
+                </div>
+                
+                <textarea id="refleksiText" rows="5" class="w-full p-4 rounded-lg bg-white/5 border border-teal-600 text-white placeholder-teal-400/50 focus:ring-2 focus:ring-emerald-400 focus:outline-none mb-4 transition-all resize-none" placeholder="Ketik rancangan Anda di sini..."></textarea>
+                
+                <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                    <button onclick="submitRefleksi()" class="bg-emerald-500 hover:bg-emerald-400 text-teal-950 font-bold py-2.5 px-6 rounded-lg transition-all shadow-lg w-full sm:w-auto flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Simpan Tugas
+                    </button>
+                    <span class="text-xs text-teal-300 italic font-medium">"Apakah kita benar menilai kompetensi, atau sekadar angka?"</span>
+                </div>
+                
+                <div id="submitMsg" class="hidden mt-4 p-3 bg-emerald-500/20 text-emerald-200 border border-emerald-500/50 rounded-lg text-sm flex items-start gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 shrink-0 mt-0.5"></i>
+                    <span>Tugas berhasil disimpan di sistem lokal untuk didiskusikan pada pertemuan berikutnya. Hebat!</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-slate-500 text-sm mt-12">
+        <p>&copy; 2026 Modul Kajian Kurikulum. Disusun untuk keperluan akademik interaktif.</p>
+    </footer>
+
+    <script>
+        // Inisialisasi ikon
+        lucide.createIcons();
+
+        // Fungsi Tabulasi Struktur
+        function openTab(tabId) {
+            // Hide all
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            
+            // Reset button styles
+            const btnK13 = document.getElementById('btn-k13');
+            const btnKurmer = document.getElementById('btn-kurmer');
+            
+            btnK13.className = 'px-6 py-3 font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-700 focus:outline-none transition-all';
+            btnKurmer.className = 'px-6 py-3 font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-700 focus:outline-none transition-all flex items-center gap-2';
+
+            // Show active
+            document.getElementById(tabId).classList.add('active');
+            
+            // Highlight active button
+            if(tabId === 'tab-k13') {
+                btnK13.className = 'px-6 py-3 font-semibold text-rose-700 border-b-2 border-rose-600 focus:outline-none transition-all';
+            } else {
+                btnKurmer.className = 'px-6 py-3 font-semibold text-emerald-700 border-b-2 border-emerald-500 focus:outline-none transition-all flex items-center gap-2';
+            }
+        }
+
+        // Simulasi Submit Tugas
+        function submitRefleksi() {
+            const text = document.getElementById('refleksiText').value;
+            const msg = document.getElementById('submitMsg');
+            
+            if(text.trim() === '') {
+                msg.innerHTML = '<i data-lucide="alert-circle" class="w-5 h-5 shrink-0 mt-0.5"></i><span>Silakan tuliskan rancangan Anda terlebih dahulu sebelum menyimpan.</span>';
+                msg.className = "mt-4 p-3 bg-rose-500/20 text-rose-200 border border-rose-500/50 rounded-lg text-sm flex items-start gap-2 block active";
+                lucide.createIcons();
+            } else {
+                msg.innerHTML = '<i data-lucide="check-circle" class="w-5 h-5 shrink-0 mt-0.5"></i><span>Rancangan berhasil disimpan untuk diskusi minggu depan. Terima kasih!</span>';
+                msg.className = "mt-4 p-3 bg-emerald-500/20 text-emerald-200 border border-emerald-500/50 rounded-lg text-sm flex items-start gap-2 block active";
+                document.getElementById('refleksiText').value = ''; 
+                lucide.createIcons();
+            }
+        }
+    </script>
+</body>
+</html>
